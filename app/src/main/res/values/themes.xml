@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.BandSpark" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#FF5722</item>
+        <item name="colorPrimaryDark">#BF360C</item>
+        <item name="colorAccent">#FF7043</item>
+        <item name="android:statusBarColor">#FF5722</item>
+    </style>
+</resources>

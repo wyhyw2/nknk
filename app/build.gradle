@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.bandspark.huohua'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.bandspark.huohua"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-rules.pro'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    // 手环互联（interconnect）手机端接收：xms-wearable-lib（非正式 SDK，来自 BandQQ）
+    implementation files('libs/xms-wearable-lib_1.4_release.aar')
+    // Task API（addOnSuccessListener 等），xms-wearable-lib 依赖
+    implementation 'com.google.android.gms:play-services-tasks:18.0.2'
+}

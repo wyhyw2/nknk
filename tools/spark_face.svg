@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  火花表盘设计稿 · 小米手环 9 Pro（336×480）
+  用途：导入「表盘自定义工具」的照片表盘功能作为背景图，
+        再把时间/日期/步数等元素叠加在上面。
+  转换：SVG → PNG（336×480）后导入。可用电脑浏览器打开本文件后截图，
+        或任意 SVG→PNG 在线转换工具。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="336" height="480" viewBox="0 0 336 480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A0B02"/>
+      <stop offset="0.55" stop-color="#331708"/>
+      <stop offset="1" stop-color="#0B0B0D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#FF8F00" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FF8F00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFEB3B"/>
+      <stop offset="0.45" stop-color="#FF9800"/>
+      <stop offset="1" stop-color="#F44336"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8E1"/>
+      <stop offset="1" stop-color="#FFCC80"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="336" height="480" fill="url(#bg)"/>
+  <rect width="336" height="480" fill="url(#glow)"/>
+
+  <!-- 顶部火花点缀 -->
+  <circle cx="168" cy="96" r="4" fill="#FFEB3B" opacity="0.85"/>
+  <circle cx="150" cy="82" r="2.5" fill="#FF9800" opacity="0.7"/>
+  <circle cx="188" cy="78" r="2" fill="#FFC107" opacity="0.6"/>
+  <circle cx="132" cy="92" r="1.5" fill="#FFEB3B" opacity="0.5"/>
+  <circle cx="204" cy="94" r="1.5" fill="#FFEB3B" opacity="0.5"/>
+
+  <!-- 主火焰 -->
+  <path d="M168,118 C181,164 216,190 216,248 C216,290 196,320 168,320
+           C140,320 120,290 120,248 C120,190 155,164 168,118 Z"
+        fill="url(#flame)" opacity="0.92"/>
+
+  <!-- 内焰 -->
+  <path d="M168,166 C173,190 191,202 191,236 C191,258 183,276 168,276
+           C153,276 145,258 145,236 C145,202 163,190 168,166 Z"
+        fill="url(#inner)" opacity="0.9"/>
+
+  <!-- 底部装饰线 -->
+  <line x1="100" y1="356" x2="236" y2="356" stroke="#FF9800" stroke-width="2" opacity="0.35"/>
+  <line x1="124" y1="368" x2="212" y2="368" stroke="#FF9800" stroke-width="1" opacity="0.2"/>
+
+  <!-- 四角装饰 -->
+  <circle cx="96" cy="352" r="3" fill="#FF9800" opacity="0.5"/>
+  <circle cx="240" cy="352" r="3" fill="#FF9800" opacity="0.5"/>
+</svg>
